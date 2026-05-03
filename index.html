@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food Bazar | Fresh Indian Restaurant</title>
+    <meta name="description" content="Food Bazar is a responsive restaurant website with online menu, ordering, reservations, and contact options.">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Food Bazar home">
+        <span class="brand-mark">FB</span>
+        <span>
+          <strong>Food Bazar</strong>
+          <small>Fresh Indian kitchen</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#reservation">Reserve</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="header-cta" href="#order">Order now</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-media" role="img" aria-label="A table filled with colorful Indian dishes"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Open daily 11:00 AM - 11:30 PM</p>
+          <h1>Food Bazar</h1>
+          <p class="hero-copy">Restaurant-style curries, grills, biryani, and street-food favorites prepared fresh for dine-in, takeaway, and quick delivery.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#menu">Explore menu</a>
+            <a class="btn ghost" href="#reservation">Book a table</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-info" aria-label="Restaurant highlights">
+        <div>
+          <strong>25-35 min</strong>
+          <span>Average delivery</span>
+        </div>
+        <div>
+          <strong>4.8/5</strong>
+          <span>Guest rating</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>Fresh ingredients</span>
+        </div>
+        <div>
+          <strong>Family</strong>
+          <span>Dining and catering</span>
+        </div>
+      </section>
+
+      <section class="section intro-section" id="about">
+        <div class="section-copy">
+          <p class="eyebrow">Our kitchen</p>
+          <h2>Professional service with bazar-style variety.</h2>
+          <p>Food Bazar brings together rich North Indian curries, tandoori plates, biryani, snacks, desserts, and drinks in one polished dining experience. The site is designed for customers to browse, order, reserve, and contact without friction on any device.</p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Fresh fried samosas with chutney">
+            <h3>Street Snacks</h3>
+            <p>Crisp chaats, rolls, and starters served hot.</p>
+          </article>
+          <article>
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80" alt="Indian curry served with rice and bread">
+            <h3>Main Course</h3>
+            <p>Comforting curries, breads, rice, and grills.</p>
+          </article>
+          <article>
+            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80" alt="A plate of aromatic biryani">
+            <h3>Biryani House</h3>
+            <p>Layered rice dishes with deep aroma and spice.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section menu-section" id="menu">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Food Bazar menu</p>
+            <h2>Browse favorites</h2>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search menu</span>
+            <input type="search" placeholder="Search dishes" data-search>
+          </label>
+        </div>
+
+        <div class="filter-row" role="tablist" aria-label="Menu category filters" data-filters>
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="starters">Starters</button>
+          <button class="filter" type="button" data-filter="mains">Mains</button>
+          <button class="filter" type="button" data-filter="biryani">Biryani</button>
+          <button class="filter" type="button" data-filter="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-layout">
+          <div class="menu-grid" data-menu-grid></div>
+
+          <aside class="order-panel" id="order" aria-label="Current order">
+            <div class="order-panel-header">
+              <div>
+                <p class="eyebrow">Online order</p>
+                <h2>Your cart</h2>
+              </div>
+              <button class="icon-btn" type="button" title="Clear cart" aria-label="Clear cart" data-clear-cart>Clear</button>
+            </div>
+            <div class="cart-items" data-cart-items>
+              <p class="empty-cart">Choose dishes from the menu to start an order.</p>
+            </div>
+            <div class="order-total">
+              <span>Total</span>
+              <strong data-cart-total>Rs 0</strong>
+            </div>
+            <form class="checkout-form" data-order-form>
+              <label>
+                <span>Name</span>
+                <input name="customer" autocomplete="name" required>
+              </label>
+              <label>
+                <span>Phone</span>
+                <input name="phone" inputmode="tel" autocomplete="tel" required>
+              </label>
+              <label>
+                <span>Order type</span>
+                <select name="type">
+                  <option>Delivery</option>
+                  <option>Pickup</option>
+                  <option>Dine-in</option>
+                </select>
+              </label>
+              <button class="btn primary full" type="submit">Place order</button>
+              <p class="form-message" data-order-message aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section specials-section">
+        <div class="special-content">
+          <p class="eyebrow">Chef special</p>
+          <h2>Weekend Bazar Thali</h2>
+          <p>A complete plate with paneer curry, dal makhani, jeera rice, butter naan, salad, pickle, and gulab jamun.</p>
+          <strong>Rs 399</strong>
+        </div>
+      </section>
+
+      <section class="section reservation-section" id="reservation">
+        <div class="section-copy">
+          <p class="eyebrow">Reservations</p>
+          <h2>Book your table</h2>
+          <p>Reserve for family dinners, office lunches, birthday gatherings, and weekend celebrations. You will receive an on-screen confirmation instantly.</p>
+        </div>
+        <form class="reservation-form" data-reservation-form>
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Phone</span>
+              <input name="phone" inputmode="tel" autocomplete="tel" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Date</span>
+              <input name="date" type="date" required>
+            </label>
+            <label>
+              <span>Time</span>
+              <input name="time" type="time" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Guests</span>
+              <input name="guests" type="number" min="1" max="20" value="2" required>
+            </label>
+            <label>
+              <span>Occasion</span>
+              <select name="occasion">
+                <option>Casual dining</option>
+                <option>Birthday</option>
+                <option>Family dinner</option>
+                <option>Business meal</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Special request</span>
+            <textarea name="request" rows="4" placeholder="Window seat, high chair, food preference"></textarea>
+          </label>
+          <button class="btn primary full" type="submit">Confirm reservation</button>
+          <p class="form-message" data-reservation-message aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-details">
+          <p class="eyebrow">Visit us</p>
+          <h2>Food Bazar Restaurant</h2>
+          <p>4, Sector C-3,Shantipuram,Phaphamau,Uttar Pradesh</p>
+          <p><a href="tel:+911234567890">+91 12345 67890</a></p>
+          <p><a href="mailto:hello@foodbazar.example">hello@foodbazar.example</a></p>
+          <div class="hours">
+            <strong>Hours</strong>
+            <span>Monday - Sunday</span>
+            <span>11:00 AM - 11:30 PM</span>
+          </div>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <label>
+            <span>Your email</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn dark full" type="submit">Send message</button>
+          <p class="form-message" data-contact-message aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Food Bazar</p>
+      <p>Fresh food, fast service, professional hospitality.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
